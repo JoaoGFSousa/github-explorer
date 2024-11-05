@@ -15,6 +15,9 @@ export const style = StyleSheet.create({
     gap: 4,
     alignItems: "center",
   },
+  loading:{
+    marginTop: 15,
+  },
   input: {
     padding: 6,
     backgroundColor: "#ededed",

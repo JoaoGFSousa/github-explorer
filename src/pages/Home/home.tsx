@@ -3,11 +3,12 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { style } from "./style";
 import { useState } from "react";
 import { getRepoInfo, Repository } from "@/src/services/get-repo-data.service";
+import { RepoPreview } from "@/src/components/RepoPreview/repo-preview";
 
 
 export const Home = () => {
     const [repo, setRepo] = useState("");
-    const [repository, setRepository] = useState<Repository | null>();
+    const [repository, setRepository] = useState<Repository | null>(null);
     const [isLoading, setIsLoading] = useState(false);
     const searchRepo = async () => {
         if((repo == "")) return;
@@ -33,7 +34,15 @@ export const Home = () => {
                     <Text style={style.buttonText} >Buscar</Text>
                 </TouchableOpacity>
             </View>
-            <View>{isLoading && <ActivityIndicator />}</View>
+            {isLoading &&(
+                <View style={style.loading}>
+                     <ActivityIndicator size={"large"} />
+                </View>
+            )}
+                <View>
+                {!isLoading && repository &&
+                <RepoPreview repository={repository}/>}
+                </View>
         </SafeAreaView>
     );
 };

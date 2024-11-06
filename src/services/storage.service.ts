@@ -9,7 +9,7 @@ export const saveData = async <T = any> (key:string, value:T) =>{
     }
 };
 
-export const getData = async<T=any>(key:string)=> {
+export const getData = async<T = any>(key:string)=> {
     try{
         const data = await AsyncStorage.getItem(`${PREFIX}${key}`);
         return JSON.parse(data as string) as T;

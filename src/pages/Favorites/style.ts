@@ -28,7 +28,7 @@ export const style = StyleSheet.create({
     },
     title:{
         color: "#160029",
-        fontWeight: 600,
+        fontWeight: "600",
     },
     removeButton:{
         padding: 6,

@@ -1,3 +1,4 @@
+import "react-native-gesture-handler";
 import { Provider } from "./src/providers";
 import { DefaultRouter } from "./src/router/default-router";
 

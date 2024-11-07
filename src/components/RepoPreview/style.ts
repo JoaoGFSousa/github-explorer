@@ -23,8 +23,6 @@ export const styles = StyleSheet.create({
     borderTopWidth: 2,
   },
   containerUser: {
-    flexDirection: "row",
-    alignItems: "center",
     gap: 6,
     marginBottom: 4,
     paddingTop: 4,
@@ -52,15 +50,16 @@ export const styles = StyleSheet.create({
     fontSize: 14,
   },
   user: {
-    width: 15,
-    height: 15,
+    fontWeight: "bold",
+    fontSize: 14,
+    color: "#160029",
   },
   image: {
     width: 50,
     height: 50,
     borderRadius: 25,
   },
-  containerButton:{
+  containerButton: {
     flexDirection: "row",
     alignItems: "center",
     gap: 6,
@@ -68,31 +67,29 @@ export const styles = StyleSheet.create({
     paddingTop: 4,
     borderTopColor: "#fcf9ff",
     borderTopWidth: 2,
-    },
-  favButton:{
-    flex:1,
+  },
+  favButton: {
+    flex: 1,
     padding: 8,
     borderRadius: 4,
     backgroundColor: "#f9ff6d",
     alignItems: "center",
     justifyContent: "center",
   },
-  favButtonText:{
+  favButtonText: {
     fontWeight: "bold",
     fontSize: 14,
-
   },
-  unFavButton:{
+  unFavButton: {
     flex: 1,
-    padding:8,
+    padding: 8,
     borderRadius: 4,
     backgroundColor: "#f90325",
     alignItems: "center",
     justifyContent: "center",
   },
-  unFavText:{
+  unFavText: {
     fontWeight: "bold",
     fontSize: 14,
   },
-
 });
